@@ -288,13 +288,6 @@ form .btn2{
     cursor: pointer;
 }
 
-.btn:after{
-    content: "";
-    display: block;
-    opacity: 0;
-    transition: all 0.8s
-}
-
 .copyright{
     width: 100%;
     text-align: center;
