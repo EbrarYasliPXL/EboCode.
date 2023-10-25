@@ -3,8 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/a4387275f8.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
+<!--Home page-->
+<div id="header">
+    <div class="container">
+        <nav>
+<!--            <img src="assets/logo.jpg" class="logo">-->
+            <h2 class="logo">Ebo<span>Code.</span></h2>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Web Designer</p>
+            <p>UI/UX Designer</p>
+            <h1>I'm <span>Ebrar</span> Yaslı</h1>
+        </div>
+    </div>
+</div>
+<!--About-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="assets/about_image.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About <span>Me</span></h1>
+                <p>I'm Ebrar Yaslı, a 20-year-old guy living in Belgium. I'm a student specializing in UI/UX design and web development. I absolutely love applying what I learn both in school and outside to create amazing digital experiences. Crafting designs and working on projects using the skills I've honed brings me immense joy. I am passionate about turning my knowledge into practical, real-world applications, shaping my journey as a web designer.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Website interfaces</li>
+                        <li><span>Web Development</span><br>Using  HTML,css and js</li>
+                        <li><span>Graphic Designs</span><br>Designing logo's</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Websites created outside and inside school projects.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Student Digital Design at PXL.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--services-->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title"><span>My</span> Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>Elevate user experiences with my expert UI/UX design solutions. I craft intuitive interfaces and seamless interactions to enhance user satisfaction and engagement. From wireframes to pixel-perfect designs, I transform ideas into visually stunning and user-friendly interfaces. Let me shape your digital presence with creativity and precision.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>I create captivating websites that blend aesthetics with functionality. My designs are responsive, intuitive, and tailored to your brand, ensuring a memorable user experience. Elevate your online presence with my expert web design solutions.</p>
+                <a href="#">Learn more</a>
+            </div><div>
+                <i class="fa-solid fa-pen-nib"></i>
+                <h2>Logo Design</h2>
+                <p>Crafting unique and memorable logos that represent your brand essence. Distinctive designs that leave a lasting impression. Elevate your brand identity with my expert logo design solutions.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--my work-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <p>Projects in the making...</p>
+<!--        <div class="work-list">-->
+<!--            <div class="work">-->
+<!--                <img src="assets/ux-indonesia-qC2n6RQU4Vw-unsplash.jpg">-->
+<!--                <div class="layer">-->
+<!--                    <h3>Social</h3>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="work">-->
+<!--                <img src="assets/LogoDesign.jpg">-->
+<!--            </div>-->
+<!--            <div class="work">-->
+<!--                <img src="assets/WebDesign.jpg">-->
+<!--            </div>-->
+<!--        </div>-->
+
+    </div>
+</div>
+
+<!--contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i>ebocode1@gmail.com</p>
+                <p> <i class="fa-solid fa-phone"></i>No Phone number yet.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/ebo.code/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/ebrar-yasli-57a014217"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © EboCode.</p>
+    </div>
+</div>
+<!--footer-->
 
 </body>
 </html>
