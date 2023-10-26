@@ -51,7 +51,7 @@
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li><span>UI/UX</span><br>Designing Website interfaces</li>
-                        <li><span>Web Development</span><br>Using  HTML,css and js</li>
+                        <li><span>Web Development</span><br>Using  HTML, css and js</li>
                         <li><span>Graphic Designs</span><br>Designing logo's</li>
                     </ul>
                 </div>
@@ -131,10 +131,10 @@
                 </div>
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea name="Message" id="message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
             </div>
@@ -145,6 +145,27 @@
     </div>
 </div>
 <!--footer-->
+<script type="text/javascript">
+    document.getElementById("contactForm").onsubmit = function(event) {
+        event.preventDefault();
 
+        // Haal de ingevulde gegevens op
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Genereer de e-mailonderwerpregel en -tekst
+        const subject = encodeURIComponent("Nieuw Contactformulier Enquiry");
+        const body = encodeURIComponent(`Naam: ${name}\nE-mail: ${email}\nBericht: ${message}`);
+
+        // Open de standaard e-mailtoepassing van de gebruiker met de ingevulde gegevens
+        window.location.href = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+
+        // Wis de ingevulde gegevens na het verzenden (optioneel)
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+    };
+</script>
 </body>
 </html>
