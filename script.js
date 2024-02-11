@@ -1,27 +1,29 @@
-
 // Script voor experiences
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(tabname){
-    for(tablink of tablinks){
+function opentab(tabname) {
+    for (tablink of tablinks) {
         tablink.classList.remove("active-link");
     }
-    for(tabcontent of tabcontents) {
+    for (tabcontent of tabcontents) {
         tabcontent.classList.remove("active-tab");
     }
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
-    }
+}
 
 //menu op kleine apparaat
 var sidemenu = document.getElementById("sidemenu");
 
-function openmenu(){
+function openmenu() {
     sidemenu.style.right = "0";
-}function closemenu(){
+}
+
+function closemenu() {
     sidemenu.style.right = "-200px";
 }
+
 //contact script
 function sendMail() {
     // Haal de waarde van de reCAPTCHA op
@@ -41,18 +43,11 @@ function sendMail() {
         };
 
         // Verstuur de e-mail met emailjs
-        emailjs.send("service_ktfdyhn", "template_g8bfznw", parms)
-            .then(function () {
-                alert("Email Sent!");
-            })
-            .catch(function (error) {
-                console.error("Error sending email:", error);
-                alert("Er is een fout opgetreden bij het verzenden van de e-mail. Probeer het later opnieuw.");
-            });
-
+        emailjs.send("service_ktfdyhn", "template_g8bfznw", parms);
+        alert("Email Sent!");
     } else {
         // Toon een foutmelding als niet alle velden zijn ingevuld, reCAPTCHA niet is voltooid, of het e-mailadres is ongeldig
-        alert("Vul alle velden in, voltooi de reCAPTCHA en voer een geldig e-mailadres in.");
+        alert("Complete all fields, finish the reCAPTCHA, and enter a valid email address.");
     }
 }
 
