@@ -30,7 +30,7 @@ function sendMail() {
     // Controleer of alle velden zijn ingevuld en reCAPTCHA is voltooid
     if (recaptchaResponse !== "" &&
         document.getElementById("name").value.trim() !== "" &&
-        document.getElementById("email").value.trim() !== "" &&
+        isValidEmail(document.getElementById("email").value) &&
         document.getElementById("message").value.trim() !== "") {
 
         // Maak het parms-object
@@ -46,8 +46,16 @@ function sendMail() {
         });
 
     } else {
-        // Toon een foutmelding als niet alle velden zijn ingevuld of reCAPTCHA niet is voltooid
-        alert("Vul alle velden in en voltooi de reCAPTCHA.");
+        // Toon een foutmelding als niet alle velden zijn ingevuld, reCAPTCHA niet is voltooid, of het e-mailadres is ongeldig
+        alert("Vul alle velden in, voltooi de reCAPTCHA en voer een geldig e-mailadres in.");
     }
 }
+
+// Functie om te controleren of een e-mailadres geldig is
+function isValidEmail(email) {
+    // Eenvoudig patroon voor e-mailvalidatie
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
 
