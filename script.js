@@ -41,9 +41,14 @@ function sendMail() {
         };
 
         // Verstuur de e-mail met emailjs
-        emailjs.send("service_ktfdyhn", "template_g8bfznw", parms).then(function () {
-            alert("Email Sent!");
-        });
+        emailjs.send("service_ktfdyhn", "template_g8bfznw", parms)
+            .then(function () {
+                alert("Email Sent!");
+            })
+            .catch(function (error) {
+                console.error("Error sending email:", error);
+                alert("Er is een fout opgetreden bij het verzenden van de e-mail. Probeer het later opnieuw.");
+            });
 
     } else {
         // Toon een foutmelding als niet alle velden zijn ingevuld, reCAPTCHA niet is voltooid, of het e-mailadres is ongeldig
@@ -58,4 +63,6 @@ function isValidEmail(email) {
     return emailPattern.test(email);
 }
 
-
+function handleRecaptcha(response) {
+    console.log("ReCAPTCHA response:", response);
+}
