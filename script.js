@@ -47,6 +47,7 @@ function sendMail() {
 
     } else {
         // Toon een foutmelding als niet alle velden zijn ingevuld of reCAPTCHA niet is voltooid
-        alert("Vul alle velden in en voltooi de robot test.");
+        alert("Vul alle velden in en voltooi de reCAPTCHA.");
     }
 }
+
