@@ -23,12 +23,12 @@ function openmenu(){
     sidemenu.style.right = "-200px";
 }
 //contact script
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwWwpy0FiTpxFn6DCcWTlgJI_lTmgruxcjUeGepGktaVmj76LhocQrxiZEHWW0Y5UmPug/exec'
-const form = document.forms['submit-to-google-sheet']
+function sendMail(){
+    let parms = {
+        name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        message : document.getElementById("message").value,
+    }
 
-form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
-})
+    emailjs.send("service_ktfdyhn", "template_g8bfznw", parms).then(alert("Email Sent!"))
+}
