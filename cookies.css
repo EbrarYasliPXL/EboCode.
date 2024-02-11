@@ -7,7 +7,7 @@
 body{
     background-color: #000000;
 }
-h2{
+h1, h2{
     color: #303ac4;
     margin-bottom: 1rem;
 }
@@ -19,7 +19,7 @@ strong{
     color: #ffffff;
     margin-bottom: 0.8rem;
 }
-section{
+section, header{
     width: 80rem;
     margin: 0 auto;
 }
