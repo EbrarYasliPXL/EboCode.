@@ -22,4 +22,5 @@ strong{
 section, header{
     width: 80rem;
     margin: 0 auto;
+    max-width: 100%;
 }
