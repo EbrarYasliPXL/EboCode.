@@ -4,3 +4,22 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+body{
+    background-color: #000000;
+}
+h2{
+    color: #303ac4;
+    margin-bottom: 1rem;
+}
+p{
+    margin-bottom: 0.5rem;
+    color: #c7c7c7;
+}
+strong{
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+}
+section{
+    width: 80rem;
+    margin: 0 auto;
+}
